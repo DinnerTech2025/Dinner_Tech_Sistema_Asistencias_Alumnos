@@ -1,0 +1,12 @@
+1. Crear Proyecto en VueJs
+
+npm create vue@latest <Nombre del Proyecto>
+
+2. Instalacion de NodeJs
+
+npm install
+
+3. Carga del Proyecto
+
+npm run dev
+

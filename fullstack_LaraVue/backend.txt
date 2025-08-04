@@ -1,0 +1,3 @@
+01 Crear proyecto
+    
+    composer create-project laravel/laravel <Nombre de la App>
