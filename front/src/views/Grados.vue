@@ -17,7 +17,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1>Soy el Dashboard</h1>
+    <h1>Soy el Grados</h1>
     <!-- <ul v-if="users.length > 0">
       <li v-for="user in users" :key="user.id">{{ user.name }}</li>
     </ul>

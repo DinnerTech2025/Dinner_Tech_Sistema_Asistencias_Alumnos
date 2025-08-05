@@ -1,25 +1,31 @@
 <template>
   <div class="login-page">
     <div class="login-box">
-      <div class="login-logo">
-        <a href="#"></a>
-      </div>
-
       <div class="card">
+        <div class="login-logo text-center">
+          <a href="#">
+            <img
+              src="../../../public/dist/img/logotipo_dinner_tech.png"
+              alt="Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
         <div class="card-body login-card-body">
-          <p class="login-box-msg">Sign in to start your session</p>
+          <h2 class="text-center fw-bold"><strong>Bienvenido</strong></h2>
+          <p class="login-box-msg">Ingresa tus Credenciales</p>
 
           <form @submit.prevent="onSubmit">
             <div class="input-group mb-3">
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                placeholder="Email"
-                v-model="email"
+                placeholder="Usuario"
+                v-model="username"
               />
               <div class="input-group-append">
                 <div class="input-group-text">
-                  <span class="fas fa-envelope"></span>
+                  <span class="fas fa-user"></span>
                 </div>
               </div>
             </div>
@@ -39,17 +45,14 @@
             </div>
 
             <div class="row">
-              <div class="col-8">
-                <div class="icheck-primary">
-                  <input type="checkbox" id="remember" v-model="remember" />
-                  <label for="remember">Remember Me</label>
-                </div>
-              </div>
-              <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">
-                  Sign In
-                </button>
-              </div>
+              <router-link
+                to="/"
+                type="submit"
+                class="btn btn-gradient btn-block"
+              >
+                <i class="fas fa-sign-in-alt"></i>
+                Iniciar Sesión
+              </router-link>
             </div>
           </form>
         </div>
@@ -80,7 +83,6 @@ function onSubmit() {
 @import "/dist/css/adminlte.min.css";
 
 .login-page {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,9 +92,32 @@ function onSubmit() {
   background-repeat: no-repeat;
 }
 
-.card-body {
-  width: 170%;
-  height: 250%;
-  border-radius: 200%;
+.card {
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+  overflow: hidden;
+  padding: 8%;
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(6, 3, 3, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc);
+  color: white;
 }
 </style>
